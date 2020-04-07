@@ -30,4 +30,6 @@
 # Ignore application configuration
 /config/application.yml
 
-/vendor/cache
+/vendor/cachesendgrid.env
+sendgrid.env
+sendgrid.env
