@@ -19,7 +19,16 @@ Rails.application.routes.draw do
   get 'sign_in' => 'users#sign_in'
   get 'leads' => 'leads#new'
   get 'welcome' => 'watson#welcome'
+  post '/admin/create_intervention' => 'interventions#create'
 
+  
+  resources :interventions do
+    get :find_buildings, on: :collection
+    get :find_batteries, on: :collection
+    get :find_column, on: :collection
+    get :find_elevator, on: :collection
+  end
+  
   # namespace :admin do
   #   resources :addresses do
   #     resources :customers do
