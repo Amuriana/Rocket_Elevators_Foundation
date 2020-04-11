@@ -1,8 +1,10 @@
 class Intervention < ApplicationRecord
-    belongs_to :Customer
-    belongs_to :Building
-    belongs_to :Battery
-    belongs_to :Column, optional: true
-    belongs_to :Elevator, optional: true
-    belongs_to :Employee, optional: true
-end
+    belongs_to :author, class_name: "Employee"
+    belongs_to :customer
+    belongs_to :building
+    belongs_to :battery
+    belongs_to :column, optional: true
+    belongs_to :elevator, optional: true
+    belongs_to :employee, optional: true
+    has_many :customers
+  end

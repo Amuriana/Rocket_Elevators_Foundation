@@ -81,11 +81,31 @@
                 <li><!-- CONTACT -->
                   <%= link_to 'CONTACT', index_path(anchor: "contact") %>
                 </li>
-                  <li>
-                    <%= link_to 'LOGIN', login_path %>
-                  </li>
-              </ul>
-            </nav>
+                
+                
+                <!--intervention+login-->
+                 <li class="dropdown active"><!-- PAGES -->
+								<a class="dropdown-toggle" href="./login.html">
+									LOGIN
+								</a>
+								<ul class="dropdown-menu">
+									<li class="dropdown">
+										<%= link_to 'Edit Info', edit_user_registration_path%>
+											EDIT INFO
+										</a>
+									</li>
+									<li class="dropdown">
+										<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+											SIGN OUT
+										</a>
+									</li>
+                 
+                  <li class="dropdown">
+										<%= link_to 'Intervention', new_intervention_path %>
+											</a>
+									</li>
+								</ul>
+            </nav>    
           </div>
         </div>
       </header>
@@ -165,3 +185,7 @@
     <%= javascript_include_tag "scripts" %>
   </body>
 </html>
+
+
+
+
