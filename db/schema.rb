@@ -146,6 +146,7 @@ ActiveRecord::Schema.define(version: 2020_04_11_135037) do
     t.string "result", default: "Incomplete"
     t.string "report", default: "", null: false
     t.string "status", default: "Pending"
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
