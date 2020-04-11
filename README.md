@@ -1,24 +1,9 @@
-# ROCKET ELEVATORS INFORMATION SYSTEM API'S
-
-  Goal for the week : Implement different Api keys into our website Rocket Elevator.
-
-###### New Update Week 7 | Odyssey :   March 27rd 2020 ######
+# ROCKET ELEVATORS Foundation
 
 
-## API Implemented 
-  - Google API - Team Leader - Alberbecois
 
-  - Twilio API - Collaborator - Amuriana
 
-  - Slack API - Collaborator - Kamiwackii
 
-  - Dropbox API - Collaborator - BenLand24
-
-  - Sendgrid API - Collaborator - Cyborg00
-
-  - IBM Watson API - Collaborator - Alberbecois
-
-  - ZenDesk API - Collaborator - Kamiwackii
 
 
   ## SPECIAL INSTRUCTIONS FOR BEGINNERS WHO WANT TO RUN THIS PROGRAM WITH PERSONAL API's
@@ -27,7 +12,7 @@
 
   2 - Create the file named " application.yml " inside config.
 
-  3 - Once you will have your own key's you can add then inside the "your_api_key" inside the following code.
+  3 - Once you will have your own key's you can add them inside the "your_api_key" inside the following code.
 
 
         # Add configuration values here, as shown below.
