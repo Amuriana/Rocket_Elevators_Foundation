@@ -3,11 +3,13 @@
 	<div class="container">
 		<header class="text-center mb-60">
 			<h2>Intervention Form</h2>
-		</header>
+		    </header>
 		<div class="row">
 			<!-- FORM -->
-			<div class="col-md-12 col-sm-12">
-
+			
+      
+      <div class="col-md-12 col-sm-12">
+                               <!-- builds a select tag from a collection: of objects: in accociation with eachother-->
           <div class="row">
             <div class="col-md-6">
                 <%= label_tag(:author, "*Author:") %>
@@ -15,61 +17,75 @@
             </div> 
           </div> 
 
+         
           <div class="row">
+            <!- -->
             <div class="col-md-4">
                 <%= label_tag(:customer_id, "*Customer:") %>
-                <%= collection_select(:intervention, :customer_id, Customer.order(:company_name), :id, :company_name, {prompt: 'Please select'}, {id: "customer_id"}) %>
+                <%= collection_select(:intervention, :customer_id, Customer.order(:company_name), :id, :company_name, {prompt: 'Select'}, {id: "customer_id"}) %>
             </div> 
 
+         
             <div class="col-md-4">
+            <!- -->
                 <%= label_tag(:building_id, "*Building:") %>
-                <%= collection_select(:intervention, :building_id, Building.order(:id), :id, :id, {prompt: 'Please select'}, {id: "building_id"} ) %>
+                <%= collection_select(:intervention, :building_id, Building.order(:id), :id, :id, {prompt: 'Select'}, {id: "building_id"} ) %>
             </div> 
 
+           
             <div class="col-md-4">
+            <!- -->
               <%= label_tag(:battery_id, "*Battery:") %>
               <%= collection_select(:intervention, :battery_id, Battery.order(:battery_type), :id, :id, {prompt: 'None'}, {id: "battery_id"} ) %>
             </div> 
           </div> 
 
+          
           <div class="row">
+          <!- -->
             <div class="col-md-4">
               <%= label_tag(:column_id, "*Column:") %>
               <%= collection_select(:intervention, :column_id, Column.order(:id), :id, :id, {prompt: 'None'}, {id: "column_id"} ) %>
             </div> 
 
+            
             <div class="col-md-4">
+            <!- -->
               <%= label_tag(:elevator_id, "*Elevators:") %>
-              <%= collection_select(:intervention, :elevator_id, Elevator.order(:serial_number), :id, :serial_number, {prompt: 'Please select'}, {id: "elevator_id"}) %>
+              <%= collection_select(:intervention, :elevator_id, Elevator.order(:serial_number), :id, :serial_number, {prompt: 'Select'}, {id: "elevator_id"}) %>
             </div> 
 
+            
             <div class="col-md-4">
-              <%= label_tag(:report, "*Description:") %>
+
+              <%= label_tag(:report, "*Description:") %> 
               <%= text_field_tag(:report) %>
             </div> 
           </div>
         
-           <div class="row">
+           
+           <div class="row">                     
               <div class="submit_i">
-                <%= submit_tag("Submit") %>
+                <%= submit_tag("Submit") %> 
               </div> 
             </div> 
           </div>
-
-              
       </div>
 		</div>
 	</div>
 </section>
+
+
 <script>
+//un-ordered selection dissabled by jquery
 $(document).ready(function(){
-    console.log("Hello");
+    console.log("Hello");       
     $("#building_id").prop("disabled", true);
     $("#battery_id").prop("disabled", true);
     $("#column_id").prop("disabled", true);
     $("#elevator_id").prop("disabled", true);
 
-    // get buildings after selecting customer
+    // Retrives building by id's related to the costumer selection 
     $("#customer_id").change(function(){
       var customer = $(this).val();
       if(customer == ''){
@@ -97,7 +113,7 @@ $(document).ready(function(){
     });
 
 
-    // get batteries after selecting building
+    // retrives battby id's related to building selection
     $("#building_id").change(function(){
       var building = $(this).val();
       if(building == ''){
@@ -159,6 +175,7 @@ $(document).ready(function(){
       }else{
         $("#elevator_id").prop("disabled", false);
       }
+
       $.ajax({
         url: "/interventions/get_elevators",
         method: "GET",  
@@ -167,6 +184,7 @@ $(document).ready(function(){
         error: function (xhr, status, error) {
             console.error('AJAX Error: ' + status + error);
         },
+
         success: function (response) {
             console.log(response);
             var elevatorsInfo = $("#elevator_id")

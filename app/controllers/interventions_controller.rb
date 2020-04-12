@@ -10,8 +10,9 @@ class InterventionsController < ApplicationController
   def create
     
     @intervention = Intervention.new(intervention_params)
-    # @intervention.author = intervention_params[:employee_id]
-    
+     #@intervention.author = intervention_params[:employee_id]
+     author = current_employee.id
+
     if @intervention.save
       flash[:notice] = "Intervention Added "
       redirect_to :index
