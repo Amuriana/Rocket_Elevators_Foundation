@@ -1,19 +1,22 @@
 
-<section class="parallax h-150 pt-40 pb-40" style="background-image: url('/assets/images/R2.png');">
+<section class="parallax h-100 pt-40 pb-40" style="background-image: url('R2.png');">
 	<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+<!-- Page Header -->
 
-	<div class="container">
+
+	<div>
+  <div class="container">
 		<div class="text-center">
-			<h2 class="fs-40 fw-100">Fill out & Submit </h2>
+			<h2 class="fs-40 fw-100">Submit a New Intervention </h2>
 		</div>
 	</div>
 			<!-- FORM -->
 			
       
-      <div class="col-md-12 col-sm-12">
+      <div class="col-md-12 mx-auto text-center">
                                <!-- builds a select tag from a collection: of objects: in accociation with eachother-->
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <%= label_tag(:author, "*Author:") %>
                 <%= collection_select(:intervention, :author_id, Employee.order(:last_name), :id, :first_name, {prompt: 'None'}, {id: "author_id"} ) %>
             </div> 
@@ -75,6 +78,7 @@
       </div>
 		</div>
 	</div>
+  </div>
 </section>
 
 
@@ -115,7 +119,7 @@ $(document).ready(function(){
     });
 
 
-    // retrives battby id's related to building selection
+    // retrives battery after building selection
     $("#building_id").change(function(){
       var building = $(this).val();
       if(building == ''){
@@ -196,7 +200,11 @@ $(document).ready(function(){
             }));
         }
       });
-    });
+    }); 
 })
+
+
+
+
 
 </script>
