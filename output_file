@@ -1,0 +1,41 @@
+
+== Brakeman Report ==
+
+Application Path: /Users/ness/Documents/GitHub/Rocket_Elevators_Foundation
+Rails Version: 5.2.4.2
+Brakeman Version: 4.8.1
+Scan Date: 2020-04-16 22:04:34 -0400
+Duration: 0.667466 seconds
+Checks Run: BasicAuth, BasicAuthTimingAttack, ContentTag, CookieSerialization, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PermitAttributes, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, RenderInline, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, SprocketsPathTraversal, StripTags, SymbolDoSCVE, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, XMLDoS, YAMLParsing
+
+== Overview ==
+
+Controllers: 6
+Models: 13
+Templates: 34
+Errors: 0
+Security Warnings: 2
+
+== Warning Types ==
+
+File Access: 1
+Mass Assignment: 1
+
+== Warnings ==
+
+Confidence: Medium
+Category: Mass Assignment
+Check: MassAssignment
+Message: Parameters should be whitelisted for mass assignment
+Code: params["lead"].permit!
+File: app/controllers/leads_controller.rb
+Line: 18
+
+Confidence: Weak
+Category: File Access
+Check: FileAccess
+Message: Parameter value used in file name
+Code: File.open(Rails.root.join("public", params["lead"].permit!["attached_file"].original_filename), "wb")
+File: app/controllers/leads_controller.rb
+Line: 26
+
