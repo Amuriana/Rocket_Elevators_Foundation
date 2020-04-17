@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def check_session_validity
     unless session[:expires_after] && session[:expires_after] > Time.now.to_i
-      redirect_to new_login_url
+        new_page_url new_lead_url
     end
   end
     
