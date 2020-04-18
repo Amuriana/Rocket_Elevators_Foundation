@@ -9,3 +9,5 @@ Rails.application.config.filter_parameters += [:password,
                                                :current_sign_in_ip,
                                                :last_sign_in_ip,
                                                :ip_address, ]
+
+                                            
