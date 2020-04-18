@@ -1,3 +1,13 @@
+Security week doc 
+
+https://docs.google.com/document/d/1DnTJkFKDJ3Dd00aeeK0r_lGF3sJTCvWM5evvCpfSDHM/edit?usp=sharing
+
+
+
+
+
+
+
 # ROCKET ELEVATORS Foundation
 
 
