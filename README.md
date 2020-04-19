@@ -1,6 +1,6 @@
 Security week doc 
+https://docs.google.com/document/d/12XNzatIVneaNYt06t8X4285FOF0efwbOrs68sE6L6wM/edit?usp=sharing
 
-https://docs.google.com/document/d/1DnTJkFKDJ3Dd00aeeK0r_lGF3sJTCvWM5evvCpfSDHM/edit?usp=sharing
 
 
 
