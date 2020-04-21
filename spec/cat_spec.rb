@@ -10,13 +10,9 @@ describe Cat do
             
         end
     
-    end
+   
 
-    describe '#hungry?' do
-        it 'returns true if hunger_level is more than 5' do
-            hungry_cat = Cat.new(hunger_level: 7)
-            
-        end
+ 
         
     end
 
