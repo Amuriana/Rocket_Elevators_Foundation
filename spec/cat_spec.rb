@@ -1,19 +1,19 @@
-require 'rspec/core'
-require 'Cat'
+#require 'rspec/core'
+#require 'Cat'
 
-describe Cat do
+#describe Cat do
     
-     describe '#meow' do
-        it 'returns the "mew"' do
-        expect(subject.meow).to  eql('mew')
+     #describe '#meow' do
+      #  it 'returns the "mew"' do
+       # expect(subject.meow).to  eql('mew')
    
             
-        end
+        #end
     
    
 
  
         
-    end
+    #end
 
-end
+#end

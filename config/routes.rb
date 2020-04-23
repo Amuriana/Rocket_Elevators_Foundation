@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'corporate' => 'pages#corporate' # corporate
   get 'residential' => 'pages#residential' # residential
   get 'quoteform' => 'quote#new' # quote form
+  get 'ambience' => 'pages#ambience'
+  get 'test' =>    'pages#test'
   get 'login' => 'pages#login'
   get 'page-register-1.html' => 'users#new.html.erb'
   get 'sign_in' => 'users#sign_in'
