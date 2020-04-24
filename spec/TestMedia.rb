@@ -1,6 +1,6 @@
 require 'rspec/core'
 require 'ElevatorMedia/ElevatorMedia.rb'
-# to test run rspec ./spec/TestMedia.rb 
+# to test the main feature run rspec ./spec/TestMedia.rb 
 describe ElevatorMedia::Streamer, :type => :feature do
   describe "getContent" do
     context 'Get a joke' do
