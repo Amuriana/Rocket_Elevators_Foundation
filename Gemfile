@@ -89,7 +89,7 @@ group :development do
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
   gem 'capistrano-rake', require: false
-  
+  gem 'rspec-rails'
   
 end
 
@@ -99,6 +99,9 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rspec-rails'
+  gem 'rspec'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -113,4 +116,4 @@ gem 'dropbox_api'
 gem 'ed25519', '~> 1.2'
 gem 'bcrypt_pbkdf', '~> 1'
 gem 'brakeman', '~> 3.4'
-gem 'rspec-rails'
+

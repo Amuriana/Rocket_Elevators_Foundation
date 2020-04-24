@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'login' => 'pages#login'
   get 'page-register-1.html' => 'users#new.html.erb'
   get 'sign_in' => 'users#sign_in'
+  get 'sign_out'=> 'users#sign_out'
   get 'leads' => 'leads#new'
   get 'intervention' => 'interventions/new'
   get 'welcome' => 'watson#welcome'
