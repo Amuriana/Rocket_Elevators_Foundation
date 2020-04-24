@@ -1,3 +1,12 @@
+# TDD 
+The main feature can be located in lib>ElevatorMedia>ElevatorMedia.rb
+tests are located in the spec folder:
+spec>TestMedia.rb to test the main feature run: rspec ./spec/TestMedia.rb 
+spec>BonusTest.rb to run bonus tests run: rspec ./spec/BonusTest.rb
+
+
+
+
 Security week doc 
 https://docs.google.com/document/d/12XNzatIVneaNYt06t8X4285FOF0efwbOrs68sE6L6wM/edit?usp=sharing
 
