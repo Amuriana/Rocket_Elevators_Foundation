@@ -1,3 +1,14 @@
+# Devops Operating and mainting products in production 
+stie: www.vanessapollice.com
+New Relic:
+
+NAME:Codeboxx123    EMAIL:rocketelevators123@gmail.com.  Pw;**********
+
+Google Analyitics:  EMAIL:rocketelevators123@gmail.com.  Pw;**********
+
+
+
+
 # TDD 
 The main feature can be located in: lib>ElevatorMedia>ElevatorMedia.rb
 
