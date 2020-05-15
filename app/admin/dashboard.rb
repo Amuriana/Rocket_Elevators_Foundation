@@ -15,13 +15,13 @@ ActiveAdmin.register_page "Dashboard" do
       render 'map'
     end
     panel "contact requests" do
-      column_chart Lead.group_by_month(:created_at).count
+     column_chart Lead.group_by_month(:created_at).count
     end
     panel "bid solicitations" do
-      column_chart Quote.group_by_month(:created_at).count
+     column_chart Quote.group_by_month(:created_at).count
     end
     panel "elevators per customer" do
-    #   column_chart Elevator.group()
+      column_chart Elevator.group()
     end
 
    end # content
